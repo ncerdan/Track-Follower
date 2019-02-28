@@ -1,0 +1,30 @@
+GOAL:
+
+    Write a program to control a car to follow a black curvey path on the ground.
+
+
+CAR DESIGN:
+
+    - 2 motor controlled wheels
+    - 3 IR-LEDs / Phototransistor pairs to detect the black line beneath the car
+    - 3 LEDs (r,g,b) to communicate car's action intentions
+
+
+EXPLANATION OF IMPLEMENTATAION:
+
+    The code sets up a simple guard rail approach. As the black line goes beneath the sensor
+    on the left, the car adjusts itself to turn to the left more to re-center itself. If the
+    right sensor finds the black line, it turns itself to the right to fix its course. If neither
+    of the sensors find the line, the car continues forwards at a faster rate.
+
+    The end of the track was marked with a perpendicular line of black, so if all three sensors discover
+    a black line, the car comes to a halt indefinitely.
+
+    The IR-LEDs / Phototransistors act as 'line sensors' because when the black line is beneath a sensor,
+    it reflects more of its IR light back into the phototransistor. The circuit is designed so as the
+    phototransistor absorbs more light, its resistance is increased, causing more voltage to be read by
+    the input pins I used in my Arduino. By monitoring the input voltages of each pair, I could track
+    where the black line was relative to the car and keep it on course.
+
+    As the car performed vairous tasks (turning left, going straight, stopping, etc.) it communicated to the
+    viewer what it was doing via 3 LEDs (r,g,b) located on the top of the vehicle.
