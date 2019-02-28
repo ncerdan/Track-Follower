@@ -24,7 +24,8 @@ EXPLANATION OF IMPLEMENTATAION:
     it reflects more of its IR light back into the phototransistor. The circuit is designed so as the
     phototransistor absorbs more light, its resistance is increased, causing more voltage to be read by
     the input pins I used in my Arduino. By monitoring the input voltages of each pair, I could track
-    where the black line was relative to the car and keep it on course.
+    where the black line was relative to the car and keep it on course. All other circuit elements wired 
+    by hand as well.
 
     As the car performed vairous tasks (turning left, going straight, stopping, etc.) it communicated to the
     viewer what it was doing via 3 LEDs (r,g,b) located on the top of the vehicle.
